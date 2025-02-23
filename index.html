@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aqua MAIN Menu Pt 1</title>
+    <title>Aqua MAIN Menu</title>
     <style>
         body {
             margin: 0;
@@ -16,12 +16,11 @@
             overflow: auto;
         }
         .menu-container {
-            transform: scale(0.37); /* Zoomed-out effect */
+            transform: scale(0.5); /* Default zoomed-out for desktop */
             transform-origin: top center;
             width: 100%;
             display: flex;
-            justify-content: center;
-            flex-direction: column; /* Stack pages vertically */
+            flex-direction: column;
             align-items: center;
         }
         table {
@@ -32,6 +31,18 @@
             max-width: 100%;
             height: auto;
             display: block;
+        }
+
+        /* Responsive Styling for Mobile Devices */
+        @media (max-width: 768px) {
+            .menu-container {
+                transform: scale(1); /* Reset zoom for mobile */
+                width: 100%;
+            }
+            img {
+                width: 100%; /* Make images fit screen width */
+                height: auto;
+            }
         }
     </style>
 </head>
